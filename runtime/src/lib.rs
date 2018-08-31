@@ -37,6 +37,11 @@ extern crate substrate_runtime_timestamp as timestamp;
 extern crate substrate_runtime_version as version;
 extern crate chainx_primitives;
 
+mod checked_block;
+
+#[cfg(feature = "std")]
+pub use checked_block::CheckedBlock;
+
 use rstd::prelude::*;
 use chainx_primitives::{AccountId, AccountIndex, Balance, BlockNumber, Hash, Index, SessionKey,
                         Signature};
@@ -52,6 +57,12 @@ pub use runtime_primitives::BuildStorage;
 #[cfg_attr(feature = "std", derive(Debug, Serialize, Deserialize))]
 /// Concrete runtime type used to parameterize the various modules.
 pub struct Concrete;
+
+
+/// The position of the timestamp set extrinsic.
+pub const TIMESTAMP_SET_POSITION: u32 = 0;
+/// The position of the offline nodes noting extrinsic.
+pub const NOTE_OFFLINE_POSITION: u32 = 2;
 
 /// Runtime version.
 pub const VERSION: RuntimeVersion = RuntimeVersion {
