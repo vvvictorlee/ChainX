@@ -1,3 +1,7 @@
-chainx/
+.chainx/
 bak/
-target/
+**/target/
+.vscode/
+.vs/
+.idea/
+chainx/
