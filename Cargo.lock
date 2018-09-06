@@ -210,7 +210,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 name = "chainx"
 version = "0.1.0"
 dependencies = [
+ "chainx-api 0.1.0",
+ "chainx-consensus 0.1.0",
  "chainx-executor 0.1.0",
+ "chainx-network 0.1.0",
  "chainx-pool 0.1.0",
  "chainx-primitives 0.1.0",
  "chainx-rpc 0.1.0",
@@ -248,10 +251,11 @@ dependencies = [
  "chainx-primitives 0.1.0",
  "chainx-runtime 0.1.0",
  "error-chain 0.12.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "log 0.3.9 (registry+https://github.com/rust-lang/crates.io-index)",
  "substrate-client 0.1.0 (git+https://github.com/chainx-org/substrate)",
+ "substrate-client-db 0.1.0 (git+https://github.com/chainx-org/substrate)",
  "substrate-codec 0.1.0 (git+https://github.com/chainx-org/substrate)",
  "substrate-executor 0.1.0 (git+https://github.com/chainx-org/substrate)",
- "substrate-keyring 0.1.0 (git+https://github.com/chainx-org/substrate)",
  "substrate-primitives 0.1.0 (git+https://github.com/chainx-org/substrate)",
  "substrate-runtime-executive 0.1.0 (git+https://github.com/chainx-org/substrate)",
  "substrate-runtime-io 0.1.0 (git+https://github.com/chainx-org/substrate)",
@@ -293,6 +297,26 @@ dependencies = [
  "chainx-runtime 0.1.0",
  "substrate-executor 0.1.0 (git+https://github.com/chainx-org/substrate)",
  "substrate-primitives 0.1.0 (git+https://github.com/chainx-org/substrate)",
+]
+
+[[package]]
+name = "chainx-network"
+version = "0.1.0"
+dependencies = [
+ "chainx-api 0.1.0",
+ "chainx-consensus 0.1.0",
+ "chainx-primitives 0.1.0",
+ "ed25519 0.1.0 (git+https://github.com/chainx-org/substrate)",
+ "futures 0.1.23 (registry+https://github.com/rust-lang/crates.io-index)",
+ "log 0.4.4 (registry+https://github.com/rust-lang/crates.io-index)",
+ "parking_lot 0.4.8 (registry+https://github.com/rust-lang/crates.io-index)",
+ "rhododendron 0.3.4 (registry+https://github.com/rust-lang/crates.io-index)",
+ "substrate-bft 0.1.0 (git+https://github.com/chainx-org/substrate)",
+ "substrate-codec 0.1.0 (git+https://github.com/chainx-org/substrate)",
+ "substrate-codec-derive 0.1.0 (git+https://github.com/chainx-org/substrate)",
+ "substrate-network 0.1.0 (git+https://github.com/chainx-org/substrate)",
+ "substrate-primitives 0.1.0 (git+https://github.com/chainx-org/substrate)",
+ "tokio 0.1.8 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
