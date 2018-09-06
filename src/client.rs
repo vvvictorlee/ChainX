@@ -32,8 +32,8 @@ pub fn build_client(db_path: &str) -> Arc<TClient> {
 
     let executor = substrate_client::LocalCallExecutor::new(
         backend.clone(),
-        NativeExecutor::<chainx_executor::Executor>::with_heap_pages(8),
-    );
+        NativeExecutor::new());
+
     let genesis_config = super::genesis_config::testnet_genesis();
 
     Arc::new(

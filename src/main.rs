@@ -5,6 +5,7 @@ extern crate substrate_runtime_primitives;
 extern crate substrate_bft as bft;
 extern crate substrate_primitives;
 extern crate substrate_client;
+extern crate substrate_keyring as keyring;
 
 extern crate chainx_consensus as consensus;
 extern crate chainx_primitives;
